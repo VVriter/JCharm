@@ -25,9 +25,14 @@ public class SelectProjectGui extends JFrame {
         fileChooser.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MainGui mainGui = new MainGui(fileChooser.getSelectedFile().getPath());
-                Main.configManager.setLastProjectPath(fileChooser.getSelectedFile().getPath());
-                dispose();
+                if (e.getActionCommand() == "CancelSelection") {
+                    StartGui startGui = new StartGui();
+                    dispose();
+                } else {
+                    MainGui mainGui = new MainGui(fileChooser.getSelectedFile().getPath());
+                    Main.configManager.setLastProjectPath(fileChooser.getSelectedFile().getPath());
+                    dispose();
+                }
             }
         });
 

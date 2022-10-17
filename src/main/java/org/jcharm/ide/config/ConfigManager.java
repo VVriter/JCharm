@@ -1,6 +1,5 @@
 package org.jcharm.ide.config;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.jcharm.ide.Main;
 import org.jcharm.ide.config.event.CreateConfigFolderEvent;
 
@@ -58,7 +57,6 @@ public class ConfigManager {
         }
     }
 
-    @Getter
     public String getLastWorkPath() {
         try {
             BufferedReader br = new BufferedReader(new FileReader(LAST_PROJECT_FILE));

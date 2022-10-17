@@ -1,6 +1,5 @@
 package org.jcharm.ide.gui.main;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.jcharm.ide.swing.JFileTree;
 
 import javax.swing.*;
@@ -25,7 +24,6 @@ public class MainGui extends JFrame {
         frame.setVisible(true);
     }
 
-    @Getter
     public String getPath() {
         return WORK_PATH;
     }
